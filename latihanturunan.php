@@ -7,8 +7,20 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
 
+
+<style type="text/css">
+body{
+  background-image : url('bintang.gif');
+  background-size : cover; 
+  color : purple;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+}
+      </style>
     <title>Hello, world!</title>
+    
   </head>
   <body>
 
@@ -16,22 +28,22 @@
 <div class="container">
 
   <center><img src="yayasanassalaam.png" /><br><br>
-<h2>PENGGAJIHAN<br>GURU/KARYAWAN YAYASAN ASSALAAM</h2></center><br/><br/>
+<h3>PENGGAJIHAN<br>GURU/KARYAWAN YAYASAN ASSALAAM</h3></center><br/><br/>
 
 <form method="POST" action="">
 
 <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">No</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>No</b></label>
     <div class="col-sm-8">
-      <input type="number" class="form-control" id="inputEmail3" name="no">
+      <input type="number" class="form-control" id="inputEmail3" name="no" required>
     </div></div>
     <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Nama</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Nama</b></label>
     <div class="col-sm-8">
       <input type="text" class="form-control" id="inputEmail3" name="nama">
     </div></div>
     <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Unit</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Unit</b></label>
     <div class="col-sm-8">
     <select class="form-control" id="exampleFormControlSelect1" name="unit">
 <option>TK</option>
@@ -43,14 +55,14 @@
 </select>
     </div></div>
     <div class="form-group row">
-    <tr><label for="inputEmail3" class="col-sm-2 col-form-label">Tanggal</label>
+    <tr><label for="inputEmail3" class="col-sm-2 col-form-label"><b>Tanggal</b></label>
     <div class="col-sm-8">
       <input type="date" class="form-control" id="inputEmail3" name="tanggal">
     </div></div>
 
 <br><center><h3>Gaji</h3></center><br>
 <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Jabatan</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Jabatan</b></label>
     <div class="col-sm-8">
     <select class="form-control" id="exampleFormControlSelect1" name="jabatan">
 <option>Kepala Sekolah</option>
@@ -59,12 +71,12 @@
 </select>
     </div></div>
     <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Lama Kerja</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Lama Kerja</b></label>
     <div class="col-sm-8">
       <input type="number" class="form-control" id="inputEmail3" name="lama_kerja">
     </div></div>
     <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Status Kerja</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Status Kerja</b></label>
     <div class="col-sm-8">
     <select class="form-control" id="exampleFormControlSelect1" name="status_kerja">
 <option>Pegawai Tetap</option>
@@ -74,22 +86,22 @@
 
     <br><center><h3>Potongan</h3></center><br>
     <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">BPJS</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>BPJS</b></label>
     <div class="col-sm-8">
       <input type="number" class="form-control" id="inputEmail3" name="bpjs">
     </div></div>
     <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Pinjaman</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Pinjaman</b></label>
     <div class="col-sm-8">
       <input type="number" class="form-control" id="inputEmail3" name="pinjaman">
     </div></div>
     <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Tabungan</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Tabungan</b></label>
     <div class="col-sm-8">
       <input type="number" class="form-control" id="inputEmail3" name="tabungan">
     </div></div>
     <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Lainnya</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Lainnya</b></label>
     <div class="col-sm-8">
       <input type="number" class="form-control" id="inputEmail3" name="lainnya">
     </div></div>
@@ -165,15 +177,39 @@ echo "<tr><td><b>Total Gaji</td><td>:</td><td>Rp. " . $this->total_gaji . "</b>"
 
 class potongan extends gaji {
 function potongan1($bpjs, $pinjaman, $tabungan, $lain) {
-    echo "<tr><td><td><td><h5><i>Potongan</i></h5></td></td></td><tr>";
-    echo "<tr><td>BPJS</td><td>:</td><td>{$bpjs}</td></tr>";
-    echo "<tr><td>Pinjaman</td><td>:</td><td>{$pinjaman}</td></tr>";
-    echo "<tr><td>Tabungan</td><td>:</td><td>{$tabungan}</td></tr>";
-    echo "<tr><td>Lainnya</td><td>:</td><td>{$lain}</td></tr>";
+    echo "<tr>
+  <td><td>
+  <td><h5><i>Potongan</i></h5></td>
+  </td></td>
+  <tr>";
+    echo "<tr>
+    <td>BPJS</td>
+    <td>:</td>
+    <td>{$bpjs}</td>
+    </tr>";
+    echo "<tr>
+    <td>Pinjaman</td>
+    <td>:</td>
+    <td>{$pinjaman}</td>
+    </tr>";
+    echo "<tr>
+    <td>Tabungan</td>
+    <td>:</td>
+    <td>{$tabungan}</td>
+    </tr>";
+    echo "<tr>
+    <td>Lainnya</td>
+    <td>:</td>
+    <td>{$lain}</td>
+    </tr>";
     $this->total_pengeluaran = $bpjs + $pinjaman + $tabungan + $lain;
-    echo "<tr><td><b>Total Potongan</td><td>:</td><td>Rp. " . $this->total_pengeluaran . "</b>";
+    echo "<tr>
+    <td><b>Total Potongan</td>
+    <td>:</td>
+    <td>Rp. " . $this->total_pengeluaran . "</b>";
     $sisa = $this->total_gaji - $this->total_pengeluaran;
-    echo "<tr><td><b><i>Jumlah Yang Diterima <td>:</td><td> Rp. " . $sisa . "</b></i></td></td></tr>";
+    echo "<tr>
+    <td><b><i>Jumlah Yang Diterima <td>:</td><td> Rp. " . $sisa . "</b></i></td></td></tr>";
 }
 }
 
